@@ -1,7 +1,7 @@
-Claiming DAPP Tokens
+领取 DAPP 代币
 ====================
 
-## Automatic
+## 自动
 
-## Manual
+## 手动
 

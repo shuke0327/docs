@@ -1,49 +1,49 @@
-Zeus Getting Started
+Zeus 入门
 ====================
 
-## Overview
-zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "boxes".
+## 概述
+zeus-cmd 是一个可扩展的命令行工具. SDK 的扩展称之为 "boxes".
 
 ## Boxes
 
-* EOSIO dApp development support
-* DAPP Services support
+* EOSIO dApp 开发支持
+* DAPP 服务支持
 
-## Hardware Requirements
+## 硬件要求
 
-## Prerequisites
+## 预备环境
 
 * nodejs == 10.x (nvm recommended)
 * curl
 
-Recommended (otherwise falling back to docker)
+推荐 (否则会回退至 docker)
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
 * [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
 
 
-## Install Zeus
+## 安装 Zeus
 
 ```bash
 npm install -g @liquidapps/zeus-cmd
 ```
 
-### Notes regarding docker on mac:
-Recommended version: 18.06.1-ce-mac73
+### 在 Mac 上 docker的版本推荐
+推荐使用 docker 版本: 18.06.1-ce-mac73
 
-## Upgrade
+## 升级
 
 ```bash
 npm update -g @liquidapps/zeus-cmd
 ```
 
-## Test
+## 测试
 ```bash
 zeus unbox helloworld
 cd helloworld
 zeus test
 ```
 
-## Samples Boxes
+## 示例 Boxes
 ### vRAM
 * [coldtoken](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken) - vRAM based eosio.token
 * [deepfreeze](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze) - vRAM based cold storage contract
@@ -51,7 +51,7 @@ zeus test
 * [cardgame](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame) - vRAM supported elemental battles
 * [registry](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry) - Generic Registry - the1registry
 
-### Zeus Extensions
+### Zeus 扩展
 * [contract-migrations-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions)
 * [build-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/build-extensions)
 * [test-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/test-extensions)
@@ -59,7 +59,7 @@ zeus test
 * [unbox-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions)
 * [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux)
 
-### DAPP Services
+### DAPP 服务
 * [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
 * [log-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service)
 * [cron-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service)
@@ -71,24 +71,24 @@ zeus test
 * [helloworld](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp) - Hello World
 * [token](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/token) - Standard eosio.token
 
-## Other Options
+## 其他选项
 ```bash
 zeus compile #compile contracts
 zeus migrate #migrate contracts (deploy to local eos.node)
 ```
 
-## Usage inside a project
+## 在项目中使用
 ```bash
 zeus --help 
 ```
 
-### List Boxes
+### 列出 Boxes
 ```bash
 zeus list-boxes
 ```
 
-## Project structure
-### Directory structure
+## 项目结构
+### 文件夹结构
 ```
     extensions/
     contracts/
@@ -157,8 +157,8 @@ zeus list-boxes
     };
 ```
 
-## Notes regarding permissions errors:
-Recommend using Node Version Manager (nvm)
+## 有关权限错误的说明:
+推荐使用 NVM
 ```bash
 sudo apt install curl
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
@@ -166,11 +166,11 @@ exec bash
 nvm install 10
 nvm use 10
 ```
-Or you can try the following:
+或者尝试如下:
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-#If still getting error:
+#如果仍然遇到错误:
 sudo chmod 666 /var/run/docker.sock
 ```

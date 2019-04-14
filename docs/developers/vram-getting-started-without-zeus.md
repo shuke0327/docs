@@ -1,4 +1,4 @@
-vRAM Getting Started - without zeus
+vRAM 入门 - 不适用 zeus
 ===================================
 
 ```            
@@ -11,27 +11,28 @@ __   _| |__) |   /  \  | \  / |
             
 ```
 
-## Hardware Requirements
+## 硬件要求
 
-## Prerequisites
+## 预备条件
 
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
 * [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
-* [Kylin Account](kylin-account.md)
+* [Kylin 测试网络账号](kylin-account.md)
 
-## Install
+## 安装
 
-Clone into your `/contracts` directory:
+复制到 `/contracts` 文件夹:
 ```bash
 git clone --recursive https://github.com/liquidapps-io/****UPDATE_THIS****
 ```
 
 
-## Modify your contract
+## 修改合约
 
-vRAM provides a drop in replacement for the multi_index table that is also interacted with in the same way as the traditional multi_index table making it very easy and familiar to use.  
+vRAM提供了对multi_index表的替换，而multi_index表也与传统的multi_index表以相同的方式进行交互，因此使用起来非常简单和熟悉。
 
-To access the vRAM table, add the following lines to your smart contract:
+想要使用 vRAM 数据表，将如下的代码加入到智能合约之中:
+
 
 ```cpp
 #include "../dappservices/log.hpp"
@@ -60,37 +61,39 @@ typedef dapp::multi_index<"accounts"_n, account> accounts_t;
 CONTRACT_END((youraction1)(youraction2)(youraction2))
 ```
 
-## Compile
+## 编译
 ```bash
 eosio-cpp -abigen -o contract.wasm contract.cpp
 ```
 
-## Deploy Contract
+## 部署合约
 ```bash
-# Buy RAM:
+# 购买 RAM:
 cleos -u $EOS_ENDPOINT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "50.0000 EOS" -p $KYLIN_TEST_ACCOUNT@active
 # Set contract code and abi
 cleos -u $EOS_ENDPOINT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TEST_ACCOUNT@active
 
-# Set contract permissions
+# 设定合约权限
 cleos -u $EOS_ENDPOINT set account permission $KYLIN_TEST_ACCOUNT active "{\"threshold\":1,\"keys\":[\"$KYLIN_TEST_PUBLIC_KEY\"],\"accounts\":[{\"permission\":{\"actor\":\"eosio.code\",\"permission\":\"active\"},\"weight\":1}]}" active -p $KYLIN_TEST_ACCOUNT@active
 ```
 
-## Select and stake DAPP for DSP package
+## 选择 DSP 服务包，抵押 DAPP 代币
 
-[DSP Package and staking](dsp-packages-and-staking.md)
+[DSP服务包及代币抵押](dsp-packages-and-staking.md)
 
-## Test
-Finally you can now test your vRAM implementation by sending an action through your DSP's API endpoint.  
+## 测试
 
-The endpoint can be found in the [package table](https://kylin.eosx.io/account/dappservices?mode=contract&sub=tables&table=package&lowerBound=&upperBound=&limit=100) of the dappservices account on all chains.
+最后，您现在可以通过 DSP 的 API 端口发送操作指令(action)来测试 vRAM 的实现
+
+
+API 可以在 [服务包的数据表中找到](https://kylin.eosx.io/account/dappservices?mode=contract&sub=tables&table=package&lowerBound=&upperBound=&limit=100)。在所有可用的区块链上，都放在账号 `dappservices`下。
 
 ```bash
 export EOS_ENDPOINT=https://dspendpoint
 cleos -u $EOS_ENDPOINT push action $KYLIN_TEST_ACCOUNT youraction1 "[\"param1\",\"param2\"]" -p $KYLIN_TEST_ACCOUNT@active
 ```
 
-The result should look like:
+结果类似:
 ```
 executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43ac2b74a  104 bytes  67049 us
 #  yourcontract <= yourcontract::youraction1         {"param1":"param1","param2":"param2"}

@@ -1,7 +1,7 @@
-Arbitration Service
+仲裁服务
 ===================
 
-## Overview
-## Contract
+## 概述
+## 合约
 
 ```arbtrservice```

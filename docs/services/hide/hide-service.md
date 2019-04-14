@@ -1,7 +1,7 @@
-Hide Service
+隐藏服务
 ============
 
-## Overview
-## Contract
+## 概述
+## 合约
 
 ```hideservices```

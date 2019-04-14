@@ -1,34 +1,34 @@
-Getting started
+入门指南
 ===============
 
-## Overview
-[Overview](overview)
+## 概述
+[概述](overview)
 
-[Architecture](architecture)
+[架构](architecture)
 
-## Prerequisites
+## 准备条件
 
-[Account](dsp-account)
+[账号](dsp-account)
 
-## Manual
+## 手动
 
-[EOSIO Node](eosio-node)
+[EOSIO 节点](eosio-node)
 
 [IPFS](ipfs)
 
-[DSP Service Node](dsp-node)
+[DSP 服务节点](dsp-node)
 
 
 ## Kubernetes
 [Kubernetes](dsp-deployment-kubernetes)
 
 
-## Configuration
+## 配置
 
-[Packages](packages)
+[服务包](packages)
 
-[Testing](testing)
+[测试](testing)
 
-## Claiming Rewards
+## 领取奖励
 
-[Claim](claim)
+[领取](claim)

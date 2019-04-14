@@ -1,8 +1,8 @@
-Packages
+服务包
 ========
 
-## Register
-### Prepare and host dsp.json 
+## 注册
+### 准备和托管 dsp.json 
 ```JSON
 {
     "name": "acme DSP",
@@ -36,7 +36,7 @@ Packages
 }
 
 ```
-### Prepare and host dsp-package.json 
+### 准备和托管 dsp-package.json 
 ```JSON
 {
     "name": "Package 1",
@@ -69,19 +69,19 @@ Packages
     ]
 }
 ```
-### If not using Kubernetes
+### 如果不使用 Kubernetes
 ```bash
 npm install -g @liquidapps/zeus-cmd
 cd $(readlink -f `which setup-dsp` | xargs dirname)
 ```
-### Register Package
+### 注册服务包
 
-**Warning: packages are read only and can't be removed yet.**
+**警告: 服务包是只读模式，不可移除**
 
 ```bash
 export PACKAGE_ID=package1
 export EOS_CHAIN=mainnet
-#or
+#或者使用
 export EOS_CHAIN=kylin
 
 export DSP_ENDPOINT=https://acme-dsp.com
@@ -96,23 +96,23 @@ zeus register dapp-service-provider-package \
     --package-json-uri https://acme-dsp.com/package1.dsp-package.json
 ```
 
-output should be:
+输出结果应为:
 ```
 ⚡registering package:package1
 ✔️package:package1 registered successfully
 ```
 
-For more options:
+更多选项:
 ```bash
 zeus register dapp-service-provider-package --help 
 ```
 
-#### Modify Package metadata:
-Currently only `package_json_uri` and `api_endpoint` are modifyable.
+#### 需改服务包元数据:
+目前只有 `package_json_uri` 及 `api_endpoint` 两者可以修改。
 
-To modify package metadata: use the "modifypkg" action of the dappservices contract.
+修改元数据，需要使用 dappservices 合约中的 "modifypkg" 操作指令.
 
-Using cleos:
+使用 cleos:
 ```bash
 cleos -u $EOS_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```

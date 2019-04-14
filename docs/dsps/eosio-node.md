@@ -1,13 +1,13 @@
-EOSIO Node
+EOSIO 节点
 ==========
-## Hardware Requirements
-## Prerequisites
+## 硬件需求
+## 预装要求
 
 - jq
 - wget
 - curl
 
-## Get EOSIO binary
+## 获取 EOSIO 二进制文件
 
 ```bash
 # install nodeos
@@ -38,19 +38,19 @@ FILENAME=eosio_$VERSION-1.el7.x86_64.rpm
 INSTALL_TOOL=yum
 ```
 
-## Install
+## 安装
 ```bash
 wget https://github.com/EOSIO/eos/releases/download/v$VERSION/$FILENAME
 sudo $INSTALL_TOOL install ./$FILENAME
 ```
 
 
-## Prepare Directories
+## 准备文件夹
 ```bash
-#cleanup
+#清理
 rm -rf $HOME/.local/share/eosio/nodeos || true
 
-#create dirs
+#创建文件夹
 mkdir $HOME/.local/share/eosio/nodeos/data/blocks -p
 mkdir $HOME/.local/share/eosio/nodeos/data/snapshots -p
 mkdir $HOME/.local/share/eosio/nodeos/config -p
@@ -65,7 +65,7 @@ CHAIN_STATE_SIZE=65535
 wget $URL -O $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin
 ```        
 
-### Mainnet
+### 主网
 
 ```bash
 URL=$(wget --quiet "https://eosnode.tools/api/bundle" -O- | jq -r '.data.snapshot.s3')
@@ -78,14 +78,14 @@ SNAPFILE=`ls snapshots/*.bin | head -n 1 | xargs -n 1 basename`
 mv snapshots/$SNAPFILE snapshots/boot.bin
 ```        
 
-## Configuration
+## 配置
 
 ```bash
 cd $HOME/.local/share/eosio/nodeos/config
 
-# download genesis
+# 下载 genesis
 wget $GENESIS
-# config
+# 配置
 cat <<EOF >> $HOME/.local/share/eosio/nodeos/config/config.ini
 agent-name = "DSP"
 p2p-server-address = addr:8888
@@ -124,12 +124,13 @@ curl $P2P_FILE > p2p-config.ini
 cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/config/config.ini
 ```
 
-## Run 
-First run (from snapshot)
+## 运行 
+首次运行(从快照文件读取)
 ```bash
 nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin --delete-all-blocks
 ```
-Wait until the node fully syncs, then press CTRL+C once, wait for the node to shutdown and proceed to the next step.
+
+等待节点完全同步后，按下 CTRL+C 使其断开一下，等待 node 停止，然后尽心下一步。
 
 ## systemd
 ```bash
@@ -154,6 +155,6 @@ sleep 3
 systemctl status nodeos
 ```
 
-## Optimizations
+## 优化
 
 - [atticlab - cpu performance presentation](https://github.com/atticlab/eos-bp-performance/blob/master/cpu_perf_presentation.pdf)

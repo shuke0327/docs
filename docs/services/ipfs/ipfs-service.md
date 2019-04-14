@@ -1,66 +1,66 @@
-IPFS Service
+IPFS 服务
 ============
 
-## Overview
+## 概述
 
-### Articles
+### 文章
 
 - [vRAM guide for experts](https://medium.com/@liquidapps/vram-guide-for-experts-f809c8f82a27)
 
-### Videos
+### 视频
 
 - [Developer Explains - Decentralized Dapp Scaling w/ IPFS! How LiquidApps Dapp Service Providers Work](https://www.youtube.com/watch?v=-XdVnK22mZc)
 
-## Contract
+## 合约
 
 ```ipfsservice1```
 
-## Contract Libraries
+## 合约文献
 
 ### Zeus Boxes
 * [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
 
-### Raw IPFS Access
+### 原始 IPFS 访问
 ```cpp
 // TBD
 ```
-### vRAM Multi-Index Table
-[vRAM Getting Started](../developers/vram-getting-started.md)
-
-```cpp
-// TBD
-```
-
-#### Shards and buckets
-```cpp
-// TBD
-```
-#### Indexes
-
-### vRAM graph
+### vRAM Multi-Index 数据表
+[vRAM 入门](../developers/vram-getting-started.md)
 
 ```cpp
 // TBD
 ```
 
-## Cache Strategies
-### On Demand
-### Delayed
-### Manual
-### Session Based
+#### 分片及数据桶(Shards and buckets)
+```cpp
+// TBD
+```
+#### 索引
+
+### vRAM 图表
+
+```cpp
+// TBD
+```
+
+## 缓存策略
+### 按需缓存
+### 延时
+### 手动
+### 基于 Session
 *TBD*
 ### LRU
 *TBD*
 ### MRU 
 *TBD*
 
-## Batched and Nested Warmups
+## 批量及嵌套预热
 *TBD*
-## Tools
-### Garbage Collection
+## 工具
+### 垃圾回收
 
-[Garbage Collection](garbage-collection)
+[垃圾回收](garbage-collection)
 
-### Recovery
+### 恢复
 
-[Recovery](recovery)
+[恢复](recovery)

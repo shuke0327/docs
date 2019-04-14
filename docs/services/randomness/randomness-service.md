@@ -1,12 +1,12 @@
-Randomness Service
+随机数服务
 ==================
 
-## Overview
-## Contract
+## 概述
+## 合约
 
 ```randservices```
 
-## Contract Libraries
+## 合约文件库
 
 ### Zeus Boxes
 * [rand-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/rand-dapp-service)

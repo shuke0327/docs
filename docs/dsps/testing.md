@@ -1,22 +1,22 @@
-Testing
+测试
 =======
 
-## Test your DSP with vRAM
+## 测试 DSP
 
-### Run a sample contract using your DSP:
-On a remote machine, follow The [vRAM Getting Started Tutorial](../developers/vram-getting-started.md)
+###  使用 DSP 运行示例合约:
+如果在远程服务器运行, 请参照 [vRAM 上手指南](../developers/vram-getting-started.md)
 
-### Check logs on your DSP Node
+### 查看 DSP 节点的 log
 ```bash
 pm2 logs
 ```
 
-in kubernetes:
+使用 kubernetes:
 ```bash
 kubectl logs dsp-dspnode-0 -c dspnode-ipfs-svc
 ```
 
-### Look for "xcommit" and "xcleanup" actions for your contract:
+### 查找合约所用的 "xcommit" and "xcleanup" 操作指令(actions):
 
 [mycoldtoken1 at bloks.io](https://bloks.io/account/mycoldtoken1)
 

@@ -1,10 +1,10 @@
-Computation Oracles Service
+计算预言机服务
 ===========================
 
-## Overview
-## Contract
+## 概述
+## 合约
 
-## Contract Libraries
+## 合约文件库
 
 ### Zeus Boxes
 * [wasm-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/wasm-dapp-service)

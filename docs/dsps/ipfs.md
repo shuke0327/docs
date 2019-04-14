@@ -1,12 +1,12 @@
 IPFS
 ====
 
-## Standalone
+## 单机
 
 [go-ipfs](https://dist.ipfs.io/#go-ipfs)
-### Hardware Requirements
+### 硬件需求
 
-### Prerequisites 
+### 预装环境 
 
 - golang
 - systemd
@@ -22,7 +22,7 @@ sudo apt-get install golang-go -y
 sudo yum install golang -y
 ```
 
-### Install 
+### 安装 
 ```bash
 sudo su -
 VERS=0.4.19
@@ -34,7 +34,7 @@ mv go-ipfs/ipfs /usr/local/bin/ipfs
 exit
 ```
 
-### Configure systemd
+### 配置 systemd
 ```bash
 sudo su -
 ipfs init
@@ -54,11 +54,11 @@ systemctl enable ipfs
 exit
 ```
 
-## Cluster
+## 集群
 
-### IPFS-Cluster
+### IPFS-集群
 
-[IPFS-Cluster Documentation](https://cluster.ipfs.io/documentation/)
+[IPFS-Cluster 文档](https://cluster.ipfs.io/documentation/)
 
 ### Kubernetes
 

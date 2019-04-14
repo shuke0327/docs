@@ -1,12 +1,12 @@
-Child Chain Service
+子链服务
 ===================
 
-## Overview
-## Contract
+## 概述
+## 合约
 
 ```childeossrvc```
 
-## Contract Libraries
+## 合约文件库
 
 ### Zeus Boxes
 * [childchain-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/childchain-dapp-service)

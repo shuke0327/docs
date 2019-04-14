@@ -1,4 +1,4 @@
-Side Chains
+侧链
 ===========
 
-## Overview
+## 概述

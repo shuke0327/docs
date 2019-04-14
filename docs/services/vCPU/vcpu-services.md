@@ -1,28 +1,28 @@
-vCPU Services
+vCPU 服务
 =================
 
-## Overview
+## 概述
 
-## vCPU Types
+## vCPU 类型
 
-### Computation Oracles
-[Computation Oracles](wasm-computation-oracles)
+### 计算预言机(Computation Oracles)
+[计算预言机](wasm-computation-oracles)
 
 ### IBC
 [IBC](ibc)
 
-#### Child Chains
-[Child Chains](child-chains)
+#### 子链
+[子链](child-chains)
 
-#### Side Chains
-[Side Chains](side-chains)
+#### 侧链
+[侧链](side-chains)
 
-#### Sister Chains
-[Sister Chains](sister-chains)
+#### 姐妹链
+[姐妹链](sister-chains)
 
-#### Foreign Chains
-[Foreign Chains](foreign-chains)
+#### 外链(Foreign Chain)
+[外链](foreign-chains)
 
-## Contract Threads
+## 合约线程
 
-## Shared Memory
+## 共享内存

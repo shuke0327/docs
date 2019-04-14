@@ -1,2 +1,2 @@
-DAPP Tokens Distribution
+DAPP 代币分发
 ========================
