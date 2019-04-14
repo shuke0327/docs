@@ -1,5 +1,5 @@
 # 使用 K8S 在主网部署 DAPP-DSP
-This helm chart will install an full mainnet DSP cluster (Syncd Mainnet API Node, DAPP DSP Services, IPFS Cluster)
+
 这一 helm chart 会安装一个完整的主网 DSP 集群(同步主网 API 节点，DAPP DSP 服务，IPFS 集群)
 
 ## 集群的最低要求
@@ -17,7 +17,7 @@ This helm chart will install an full mainnet DSP cluster (Syncd Mainnet API Node
 [GKE](https://cloud.google.com/kubernetes-engine/docs/quickstart)
 
 ## 部署
-###  安装和配置好 kubectl，并运行 nodes
+###  安装和配置好 kubectl，并运行 node
 ```
 kubectl get nodes
 ```
