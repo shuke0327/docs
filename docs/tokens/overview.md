@@ -12,4 +12,5 @@ DAPP 代币概览
 
 ## 了解更多信息
 
-- Read our [whitepaper](https://liquidapps.io/DAPP%20Network%20and%20DAPP%20Token%20Whitepaper%20v2.0.pdf) and subscribe to our [Medium](https://medium.com/@liquidapps/) posts.
+
+- 请阅读[白皮书](https://liquidapps.io/DAPP%20Network%20and%20DAPP%20Token%20Whitepaper%20v2.0.pdf) 或者订阅我们的 [Medium](https://medium.com/@liquidapps/) 博客。

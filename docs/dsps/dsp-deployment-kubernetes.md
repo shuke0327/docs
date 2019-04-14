@@ -9,7 +9,7 @@ This helm chart will install an full mainnet DSP cluster (Syncd Mainnet API Node
 * 网络: 1 GigE
 * 硬盘: 1TB
 
-## 上手指南
+## 使用指南
 ### AWS
 [EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 

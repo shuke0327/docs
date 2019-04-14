@@ -4,6 +4,7 @@
 ## 文章
 
 - [vRAM guide for experts](https://medium.com/@liquidapps/vram-guide-for-experts-f809c8f82a27)
+- [中文版: vRAM 专家指南](https://bihu.com/article/1053897429)
 
 ## 视频
 
