@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'LiquidApps'
+project = 'LiquidApps 文档'
 copyright = '2019, LiquidApps'
 author = 'LiquidApps'
 
@@ -72,3 +72,5 @@ source_suffix = {
     '.txt': 'restructuredtext',
     '.md': 'markdown',
 }
+
+language = 'zh_CN'
